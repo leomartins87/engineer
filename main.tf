@@ -20,7 +20,7 @@ locals {
 
 resource "aws_security_group" "nginx" {
         name = "nginx_access"
-#VPC mandatory?
+#VPC 
 
         ingress {
          from_port = 22
