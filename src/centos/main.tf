@@ -21,8 +21,7 @@ locals {
 
 resource "aws_security_group" "centos-sec-group" {
   name = "centos_access"
-  #VPC
-
+  
   ingress {
     from_port   = 22
     to_port     = 22
