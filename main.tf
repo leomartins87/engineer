@@ -10,7 +10,7 @@ terraform {
 #Use an ssh-key pair
 
 locals {
-        ssh_user         = "engineer"
+        ssh_user         = "ubuntu"
         key_name         = "ssh-key-pair1"
         private_key_path = "/tmp/ssh-key-pair1.pem"
 }
