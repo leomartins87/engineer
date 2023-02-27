@@ -45,7 +45,6 @@ resource "aws_security_group" "ubuntu-sec-group" {
 }
 
 
-
 # Create an EC2 instance
 
 resource "aws_instance" "ubuntu-vm" {
@@ -59,3 +58,4 @@ resource "aws_instance" "ubuntu-vm" {
                 Description = "Ubuntu vm test"
         }
 }
+
