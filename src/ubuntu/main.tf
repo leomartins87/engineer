@@ -21,8 +21,7 @@ locals {
 
 resource "aws_security_group" "ubuntu-sec-group" {
   name = "ubuntu_access"
-  #VPC
-
+  
   ingress {
     from_port   = 22
     to_port     = 22
@@ -46,13 +45,9 @@ resource "aws_security_group" "ubuntu-sec-group" {
 }
 
 
-
 # Create an EC2 instance
 
 resource "aws_instance" "ubuntu-vm" {
-#        ami     = "ami-0e0adf56e7c126fb7" #Ubuntu 21.04 AMI not found automatically
-#        ami     = "ami-0c880bbd328a9091d" #Ubuntu 21.04 AMI not found automatically
-#        ami                         = "ami-0735c191cf914754d" #Ubuntu 22.04
          ami     = "ami-0c4aac39c51578be6" #Ubuntu 21.04 Oregon
   instance_type               = "t2.micro"
   associate_public_ip_address = true
@@ -63,3 +58,4 @@ resource "aws_instance" "ubuntu-vm" {
     Description = "Ubuntu 21.04 lab vm"
   }
 }
+
