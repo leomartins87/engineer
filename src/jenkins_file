@@ -1,1 +1,31 @@
 
+pipeline {
+	agent any
+	
+	stages {
+
+		stage ('Check source') {
+			steps {
+				git url: 'https://github.com/leomartins87/engineer.git', branch: 'main'
+
+		stage ('Create EC2 instances') {
+			steps {
+
+				environment {
+				...
+				
+				}
+				
+
+				script {
+					dir('src') {
+					    sh 'terraform init' 
+					    sh 'terraform apply --auto-aprove'
+					}
+ 
+				}
+			}
+			}
+			}
+	}
+}
